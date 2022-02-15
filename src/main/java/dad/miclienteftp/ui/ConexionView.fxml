@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="view" prefHeight="200.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+	<columnConstraints>
+		<ColumnConstraints hgrow="ALWAYS" maxWidth="95.20001220703125" minWidth="10.0" prefWidth="75.20001220703125" />
+		<ColumnConstraints hgrow="ALWAYS" minWidth="10.0" />
+	</columnConstraints>
+	<rowConstraints>
+		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+		<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+		<RowConstraints minHeight="10.0" prefHeight="30.0" />
+	</rowConstraints>
+	<children>
+		<HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1">
+			<children>
+				<TextField fx:id="serverText" HBox.hgrow="ALWAYS" />
+			</children>
+		</HBox>
+		<HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+			<children>
+				<TextField fx:id="puertoText" prefHeight="26.0" prefWidth="55.0" />
+			</children>
+		</HBox>
+		<HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+			<children>
+				<TextField fx:id="usuarioText" />
+			</children>
+		</HBox>
+		<HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+			<children>
+				<TextField fx:id="contraText" />
+			</children>
+		</HBox>
+		<HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+			<children>
+				<Button fx:id="conectatButton" mnemonicParsing="false" onAction="#onConectarButton" text="Conectar" />
+				<Button fx:id="cancelarButton" mnemonicParsing="false" onAction="#onCancelarButton" text="Cancelar" />
+			</children>
+		</HBox>
+		<Label text="Servidor:" />
+		<Label text="Contraseña:" GridPane.rowIndex="3" />
+		<Label text="Puerto:" GridPane.rowIndex="1" />
+		<Label text="Usuario:" GridPane.rowIndex="2" />
+	</children>
+	<padding>
+		<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+	</padding>
+</GridPane>
